@@ -3,7 +3,7 @@
 # ============================================================
 
 
-YOUTUBE_API_KEY = "AIzaSyCPfPI-zldaPjUCUJY5KUPmvZx-RBaZW50"
+YOUTUBE_API_KEY = "YOUR_YOUTUBE_API_KEY_HERE" 
 
 DEFAULT_VIDEOS = 10
 DEFAULT_COMMENTS_PER_VIDEO = 100
