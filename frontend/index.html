@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SIH 2026 — Government Scheme Social Media Intelligence</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="titlebar">
+    <div class="brand-mark">◇</div>
+    <div class="title">SIH 2026 — Government Scheme Social Media Intelligence</div>
+    <div class="window-controls"><span>—</span><span>□</span><span>×</span></div>
+  </header>
+
+  <nav class="topnav">
+    <button class="top-tab active" data-target="dashboard">Dashboard</button>
+    <div class="backend-status"><i id="statusDot"></i><span id="statusText">Checking backend…</span></div>
+  </nav>
+
+  <div class="workspace">
+    <aside class="sidebar">
+      <div class="console-label">SIH CONSOLE</div>
+      <button class="side-item active" data-target="dashboard">▣ <span>Overview</span></button>
+      <button class="side-item" data-target="analysis">⌕ <span>Scheme Analysis</span></button>
+      <button class="side-item" data-target="issues">⚠ <span>Major Issues</span></button>
+      <button class="side-item" data-target="claims">✓ <span>Claim Intelligence</span></button>
+      <button class="side-item" data-target="trends">↗ <span>Complaint Trends</span></button>
+      <button class="side-item" data-target="sources">▶ <span>YouTube Sources</span></button>
+      <div class="sidebar-foot">Prototype build<br>SIH 2026</div>
+    </aside>
+
+    <main class="main">
+      <section id="dashboard" class="section hero-section">
+        <div class="page-heading">
+          <div>
+            <h1>Government Scheme Intelligence Console</h1>
+            <p>YouTube public sentiment • issue detection • claim intelligence • complaint trends</p>
+          </div>
+          <button class="classic-button" id="clearBtn">↻ Clear Results</button>
+        </div>
+      </section>
+
+      <section id="analysis" class="panel section">
+        <div class="panel-head"><b>Analysis Configuration</b><span id="analysisState">READY</span></div>
+        <div class="panel-body">
+          <div class="form-grid">
+            <label class="wide">Scheme Name<input id="schemeInput" value="PM Kisan" autocomplete="off"></label>
+            <label>Videos<input id="videosInput" type="number" value="10" min="1" max="25"></label>
+            <label>Comments / Video<input id="commentsInput" type="number" value="100" min="1" max="500"></label>
+          </div>
+          <div class="button-row">
+            <button class="primary-button" id="analyzeBtn">▶ ANALYSE SCHEME</button>
+          </div>
+          <div id="errorBox" class="error-box hidden"></div>
+          <div id="loadingBox" class="loading-box hidden"><div class="spinner"></div><div><b>Analysis in progress</b><p id="loadingText">Collecting YouTube comments and processing public signals…</p></div></div>
+        </div>
+      </section>
+
+      <section id="overviewResults" class="section hidden"></section>
+      <section id="issues" class="section"></section>
+      <section id="claims" class="section"></section>
+      <section id="trends" class="section"></section>
+      <section id="sources" class="section"></section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
